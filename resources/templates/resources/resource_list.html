@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resources</title>
+</head>
+<body>
+    <h1>Resource List</h1>
+    {% for category, resource_list in resources.items %}
+    <h2>{{category}}</h2>
+        {% for resource in resource_list %}
+        <p><a href="{{resource.url}}">{{resource.title}}</a></p>
+        {% endfor %}
+    {% endfor %}
+</body>
+</html>
